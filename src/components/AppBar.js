@@ -20,7 +20,7 @@ const MyAppBar = (props) => {
           <Typography variant="title" color="inherit" className={classes.text}>
             Project Chichar
           </Typography>
-          <Button color="inherit">github</Button>
+          <Button color="inherit" onClick={() => {window.location="https://github.com/Linyxus/chichar-ui"}}>github</Button>
         </Toolbar>
       </AppBar>
     </div>
