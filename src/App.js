@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
+import { Route, Switch } from 'react-router-dom';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import MyAppBar from './components/AppBar';
-import IntroTable from './components/IntroTable';
-import EntryList from './components/EntryList';
+import Main from './Main';
 
 class App extends Component {
   render() {
@@ -10,8 +10,9 @@ class App extends Component {
       <div>
         <CssBaseline />
         <MyAppBar />
-        <IntroTable />
-        <EntryList />
+        <Switch>
+          <Route exact path="/" component={Main} />
+        </Switch>
       </div>
     );
   }
