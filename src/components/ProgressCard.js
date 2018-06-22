@@ -6,6 +6,7 @@ import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import LinearProgress from '@material-ui/core/LinearProgress';
+import { Link } from 'react-router-dom';
 
 const styles = {
   card: {
@@ -35,7 +36,7 @@ function ProgressCard(props) {
           <LinearProgress variant="determinate" value={props.current} />
         </CardContent>
         <CardActions>
-          <Button size="small">Contribute</Button>
+          <Button size="small" component={Link} to={`/collect/${props.id}`}>Contribute</Button>
         </CardActions>
       </Card>
     </div>

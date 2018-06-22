@@ -45,6 +45,7 @@ class EntryList extends React.Component {
     const cards = entries.map((entry) => (
       <EntryCard
         key={entry.id}
+        id={entry.id}
         type={entry.type}
         title={entry.title}
         desc={entry.desc}

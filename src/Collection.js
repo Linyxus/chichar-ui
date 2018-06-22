@@ -1,8 +1,6 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import ProgressCard from './components/ProgressCard';
-import DescCard from './components/DescCard';
 
 const styles = {
   title: {
@@ -11,13 +9,11 @@ const styles = {
   }
 };
 
-class EntryInfo extends React.Component {
+class Collection extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       title: `Entry #${props.match.params.id}`,
-      current: 35,
-      desc: "A collection for the famous poem."
     };
   }
 
@@ -28,11 +24,9 @@ class EntryInfo extends React.Component {
         <Typography variant="display2" className={classes.title}>
           {this.state.title}
         </Typography>
-        <DescCard desc={this.state.desc} />
-        <ProgressCard current={this.state.current} id={this.props.match.params.id} />
       </div>
     );
   }
 };
 
-export default withStyles(styles)(EntryInfo);
+export default withStyles(styles)(Collection);  
